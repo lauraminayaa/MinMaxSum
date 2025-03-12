@@ -1,0 +1,16 @@
+name: Run Python 
+
+on:
+  push:
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest  
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+         ref: 'main'
+    
+    - name: Run Python Script
+      run: python3 minmax.py 
